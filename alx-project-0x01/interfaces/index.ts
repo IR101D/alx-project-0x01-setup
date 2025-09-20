@@ -5,14 +5,27 @@ export interface PostProps {
   body: string;
 }
 export interface UserProps {
-    id: number;
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    };
+  };
+  phone: string;
+  website: string;
+  company: {
     name: string;
-    username: string;
-    email: string;
-    address: string;
-    phone: string;
-    website: string;
-    company: string;
+    catchPhrase: string;
+    bs: string;
+  };
 }
 export interface PostData {
   userId: number;
