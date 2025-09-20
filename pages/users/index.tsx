@@ -25,6 +25,13 @@ const Users: React.FC<{ users: UserProps[] }> = ({ users }) => {
             ))
           }
         </div>
+         <div className="grid grid-cols-3 gap-2 ">
+          {
+            posts.map(({ title, body, userId, id }: PostProps, key: number) => (
+              <PostCard title={title} body={body} userId={userId} id={id} key={key} />
+            ))
+          }
+        </div>
       </main>
       {isModalOpen && (<UserModal onClose={() => setModalOpen(false)} onSubmit={handleAddUser} />
       )}
